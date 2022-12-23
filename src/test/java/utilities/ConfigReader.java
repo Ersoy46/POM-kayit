@@ -16,6 +16,7 @@ public class ConfigReader {
             FileInputStream fis=new FileInputStream(path);
             properties=new Properties();
             properties.load(fis);
+            fis.close();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
