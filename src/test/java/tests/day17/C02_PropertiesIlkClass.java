@@ -8,6 +8,7 @@ import utilities.Driver;
 
 public class C02_PropertiesIlkClass {
 
+
     //https://hotelmycamp.com adresine gidiniz
     //login butonuna basınız
     //test date username:manager1,

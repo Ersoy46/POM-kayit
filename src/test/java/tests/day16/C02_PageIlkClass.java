@@ -23,7 +23,7 @@ public class C02_PageIlkClass {
     }
 
 
-@Test
+@Test(groups = {"miniRegression", "smoke"})
     public void test02(){
     Driver.getDriver().get("https://www.amazon.com");
     AmazonPage  amazonPage=new AmazonPage();

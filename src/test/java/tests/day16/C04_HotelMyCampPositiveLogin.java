@@ -9,7 +9,7 @@ import utilities.Driver;
 public class C04_HotelMyCampPositiveLogin {
 
 
-    @Test
+    @Test(groups = {"miniRegression", "smoke"})
     public void test01() {
 
         //bir test method oluştur positivetestlogin
@@ -19,12 +19,15 @@ public class C04_HotelMyCampPositiveLogin {
         //	test data password : Manager1!
         //	Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
 
-        Driver.getDriver().get("https://hotelmycamp.com");
+    //    Driver.getDriver().get("https://hotelmycamp.com");
+    //    HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+    //    hotelMyCampPage.spamGelişmişTuşu.click();
+    //    Actions actions=new Actions(Driver.getDriver());
+    //    actions.sendKeys(Keys.PAGE_DOWN).perform();
+    //  hotelMyCampPage.spamYenidenDeneSekmesi.click();
+    //    hotelMyCampPage.ilkLoginTuşu.click();
+
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
-        hotelMyCampPage.spamGelişmişTuşu.click();
-        Actions actions=new Actions(Driver.getDriver());
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-      hotelMyCampPage.spamYenidenDeneSekmesi.click();
-      //  hotelMyCampPage.ilkLoginTuşu.click();
+        hotelMyCampPage.girisYap();
     }
 }

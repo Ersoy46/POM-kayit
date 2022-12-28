@@ -1,10 +1,12 @@
 browser=chrome
 HMCUrl=https://www.hotelmycamp.com
 HMCValidUsername=manager
-HMCValiPasword=Manager1!
+HMCValidPasword=Manager1!
 HMCWrongUsername=manager1
 HMCWrongPasword=manager2!
 
 
 AmazonUrl=https://www.amazon.com
 TecproUrl=https://tecproeducation.com
+
+DemoqaUrl=https://demoqa.com/webtables

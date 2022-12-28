@@ -1,6 +1,10 @@
 package tests.smokeTest;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.HotelMyCampPage;
+import utilities.ConfigReader;
+import utilities.Driver;
 
 public class NegativeLoginTesti {
 
@@ -14,18 +18,38 @@ public class NegativeLoginTesti {
     //3) Login butonuna bas
     //4) Verilen senaryolar ile giris yapilamadigini test et
 
-    @Test
-    public void yanlısSifreTesti(){
+    HotelMyCampPage hotelMyCampPage;
 
+    @Test
+    public void yanlısSifreTesti() {
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
+        hotelMyCampPage = new HotelMyCampPage();
+        hotelMyCampPage.ilkLoginTuşu.click();
+        hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
+        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCWrongPasword"));
+        hotelMyCampPage.loginButonu.click();
+        Assert.assertTrue(hotelMyCampPage.girişYapılamadıElementi.isDisplayed());
+        Driver.closeDriver();
+    }
+
+    @Test
+    public void yanlısUsernameTesti() {
+        Driver.getDriver().get("HMCUrl");
+        hotelMyCampPage.ilkLoginTuşu.click();
+        hotelMyCampPage.usernameBox.sendKeys("HMCWrongUsername");
+        hotelMyCampPage.passwordBox.sendKeys("HMCValidPasword");
+        hotelMyCampPage.loginButonu.click();
+        Assert.assertTrue(hotelMyCampPage.girişYapılamadıElementi.isDisplayed());
+        Driver.closeDriver();
 
     }
-    @Test
-    public void yanlısUsernameTesti(){
-
-    }
 
     @Test
-    public void yanlısSifreUsernameTesti(){
+    public void yanlısSifreUsernameTesti() {
+        HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage.girisYap();
+        Assert.assertTrue(hotelMyCampPage.girişYapılamadıElementi.isDisplayed());
+        Driver.closeDriver();
 
     }
 }

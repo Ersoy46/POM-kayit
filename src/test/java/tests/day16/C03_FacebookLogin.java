@@ -13,7 +13,7 @@ public class C03_FacebookLogin {
     //FAKER CLASS'INI KULLANIP EMAİL VE ŞİFRE YAZDIRIP, g,r,ş butonuna basın
     //başarılı giriş yapılamadıgı test edin
 
-    @Test
+    @Test(groups = {"miniRegression", "Regression"})
     public void test01() throws InterruptedException {
         Driver.getDriver().get("https://www.facebook.com");
         FacebookPage facebookPage=new FacebookPage();

@@ -1,5 +1,12 @@
 package tests.day18;
 
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+import pages.HMCWebTablePage;
+import pages.HotelMyCampPage;
+
+import java.util.List;
+
 public class C02_WebTables {
     //Bir class oluşturun : C02_WebTables
     //● login() metodun oluşturun ve oturum açın.
@@ -25,5 +32,30 @@ public class C02_WebTables {
     // eger tum satirlari yazdirmak istersek
 
     //			○ 4.satirdaki(row) elementleri konsolda yazdırın.
+
+    HotelMyCampPage hotelMyCampPage;
+
+    @Test
+    public void loginT() {
+        hotelMyCampPage = new HotelMyCampPage();
+        hotelMyCampPage.girisYap();
+
+    }
+
+    @Test
+    public void table() {
+        HMCWebTablePage hmcWebTablePage = new HMCWebTablePage();
+        List<WebElement> headerDataList = hmcWebTablePage.HeaderBirinciSatırDatalar;
+        System.out.println("headar daki datalar:" + headerDataList.size());
+
+        System.out.println(hmcWebTablePage.tumBodyWebElemnt.getText());
+
+
+    }
+
+    @Test
+    public void printRows() {
+
+    }
 
 }
