@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="coklu calistirma Sirali" parallel="classes" thread-count="3">
+    <test name="farklı browselerle calisma">
+        <packages>
+            <package name="tests.crossBrowserTests"></package>
+        </packages>
+    </test>
+</suite>
