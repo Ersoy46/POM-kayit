@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="deneme02">
+    <test name="denemeTestleri">
+        <classes>
+            <class name="tests.day16.C01_DriverIlkTest"></class>
+            <class name="tests.day16.C02_PageIlkClass"></class>
+        </classes>
+    </test>
+</suite>

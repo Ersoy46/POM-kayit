@@ -24,6 +24,7 @@ public class NegativeLoginTesti {
     public void yanlısSifreTesti() {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         hotelMyCampPage = new HotelMyCampPage();
+        hotelMyCampPage.girisYap();
         hotelMyCampPage.ilkLoginTuşu.click();
         hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
         hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCWrongPasword"));
@@ -35,6 +36,7 @@ public class NegativeLoginTesti {
     @Test
     public void yanlısUsernameTesti() {
         Driver.getDriver().get("HMCUrl");
+        hotelMyCampPage.girisYap();
         hotelMyCampPage.ilkLoginTuşu.click();
         hotelMyCampPage.usernameBox.sendKeys("HMCWrongUsername");
         hotelMyCampPage.passwordBox.sendKeys("HMCValidPasword");

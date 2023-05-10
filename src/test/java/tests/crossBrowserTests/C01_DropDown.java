@@ -22,6 +22,7 @@ public class C01_DropDown extends TestBaseCross {
         select.selectByIndex(3);
 
         System.out.println(select.getFirstSelectedOption().getText());
+
         Thread.sleep(3000);
 
         select.selectByValue("search-alias=arts-crafts-intl-ship");

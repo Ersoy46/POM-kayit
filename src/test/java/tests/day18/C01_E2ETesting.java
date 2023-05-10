@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C01_E2ETesting {
@@ -54,6 +55,7 @@ public class C01_E2ETesting {
         select.selectByVisibleText("Hotel Type2");
 
         hotelMyCampPage.addHotelSaveButonu.click();
+
 
        // Assert.assertTrue(hotelMyCampPage.başarılıGirişYazisi.isDisplayed());
 

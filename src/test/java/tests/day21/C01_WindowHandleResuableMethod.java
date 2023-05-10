@@ -1,6 +1,7 @@
 package tests.day21;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Driver;
@@ -19,6 +20,7 @@ public class C01_WindowHandleResuableMethod {
         Driver.getDriver().get("https://the-internet.herokuapp.com/windows");
 
         String ilksayfawindowhandle=Driver.getDriver().getWindowHandle();
+
 
         Driver.getDriver().findElement(By.xpath("//a[@href=\"/windows/new\"]")).click();
 
@@ -51,8 +53,10 @@ public class C01_WindowHandleResuableMethod {
             String expectedTitle="New Window";
             String actualTitle=Driver.getDriver().getTitle();
 
-            ResuableMethodlar.getScreenshot("Window Switch");
+            ResuableMethodlar.switchToWindow("New Window");
+            ResuableMethodlar.getScreenshot("NewSwitch");
 
             Assert.assertEquals(actualTitle,expectedTitle);
+            Driver.getDriver().quit();
 }
 }

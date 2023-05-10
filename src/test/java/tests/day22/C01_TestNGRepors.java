@@ -23,11 +23,12 @@ public class C01_TestNGRepors extends TestBaseRapor {
         ResuableMethodlar.switchToWindow("New Window");
         extentTest.info("resuable method kullanarak açılan 2.sayfaya geçildi");
 
-
+        ResuableMethodlar.waitFor(2);
         String expectedTitle = "New Window";
         String actualTitle = Driver.getDriver().getTitle();
         extentTest.pass("titlenin beklenen degeriyle aynı oldugu test edildi");
         ResuableMethodlar.getScreenshot("Window Switch");
+
 
         Assert.assertEquals(actualTitle, expectedTitle);
 
